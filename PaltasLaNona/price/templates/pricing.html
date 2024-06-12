@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Listado de Cotización</h1>
+
+    <ul>
+        {% for solicitud in sol_cotizacion %}
+            <h1> Solicitud: {{solicitud.id}} </h1>
+
+            {% if solicitud.estado == 1 %}
+                <li> Estado: Completado </li>
+
+            {% else %}
+                <li> Estado: Pendiente </li>    
+            {% endif %}
+
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Solicitar Cotización</h1>
+
+    <form action="/pricing/create/" method="POST">
+        
+        {% csrf_token %}
+
+        {{form}}
+
+        <button>
+            Enviar Solicitud
+        </button>
+
+    </form>
+
+{% endblock %}
